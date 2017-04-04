@@ -1,1 +1,521 @@
-"Test!" 
+<!DOCTYPE html>
+<!--
+                                                             =======================================       
+                                                    =====================================================  
+                                            =============================================================  
+                                     ==============                     ================================   
+                                                                                ======================     
+											 .d8888b.    8888888888   888b    888     ============       
+											d88P  Y88b   888          8888b   888 
+											Y88b.        888          88888b  888 
+											 "Y888b.     8888888      888Y88b 888 
+												"Y88b.   888          888 Y88b888 
+												  "888   888          888  Y88888 
+											Y88b  d88P   888          888   Y8888 
+      ==========							 "Y8888P"    888          888    Y888                            
+    ==================                                                                                  
+  ================================                      ===========                                     
+ ===========================================================                                            
+ ===================================================                                                    
+      ====================================                                                              
+                 ============          
+-->
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<link rel="icon" type="image/png" href="img/favicon.png">
+
+    <title>Bee Cell Phone Radiation Research</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<!-- jQuery -->
+	
+	<!-- Image Stuff -->
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/ekko-lightboxREMOVED/4.0.1/ekko-lightboxREMOVED.min.css" rel="stylesheet">
+	
+	<!-- Some custom css -->
+	<style>
+		.bee-media-gallery-thumbnail {
+			padding: 2px;
+		}
+	</style>
+	
+	<!-- 
+		 ImageFullScreenViewerThingy 
+		        I F S V T 
+	-->
+	<style>
+		#ifsvt-background {
+		  opacity:    0; 
+		  background: #000; 
+		  width:      100%;
+		  height:     100%; 
+		  z-index:    100;
+		  top:        0; 
+		  left:       0; 
+		  position:   fixed;
+		}
+		#ifsvt-displayimg {
+		  opacity:    0; 
+		  display: block;
+		  max-width: 85%;
+		  height: auto;
+		  max-height: 95%;
+		  z-index:    101;
+		  top:        2.5%; 
+		  left:       7.5%; 
+		  position:   fixed;
+		  -webkit-box-sizing: border-box;
+		  -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+		 
+		}
+		
+		.ifsvt-image {
+			// Any image that shall recieve IFSVT-Capability
+		}
+		#ifsvt-placeholder {
+			// The actual 
+		}
+		.ifsvt-display {
+			// The whole display consisting of:
+			// #ifsvt-background
+			// #ifsvt-displayimg
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div id="ifsvt-placeholder">
+		
+	</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                   <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+					<li>
+                        <a href="#media">Media</a>
+                    </li>
+					<li>
+                        <a href="#who">Who</a>
+                    </li>
+                    <li>
+                        <a href="#hive">Hive</a>
+                    </li>
+                    <li>
+                        <a href="#plan">Plan</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/home-bg.jpg')" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0">
+                    <div class="site-heading">
+                        <h1>Influence of Cell Phone Radiation on Worldwide Decline of Honeybee Population</h1>
+                        <hr class="small">
+                        <span class="subheading">a student research project at the Schülerforschungszentrum Nordhessen in Kassel</span>
+						<a href="#greentec" ><img style="padding-top:15px; width:13%"  src="img/greentec/GTA_Siegel-2017_Top10_35x55_300dpi.jpg"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	
+	
+		<article id="greentec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">GreenTec Awards 2017</h2>
+                   
+					<p>With 24% of all votes in our category, we managed to win the WWF Galileo Green Youngster Award of the 2017 GreenTec Awards.
+					<br>Thanks a lot for your support!
+					
+ </p>
+					
+
+			
+           
+					</div>
+            </div>
+        </div>
+     <hr></article>
+	
+	
+	<article id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">What We Are About</h2>
+
+					<p>For many years beekeepers have been noticing a steady loss of bee population. This phenomenon is called
+Colony Collapse Disorder (CCD). It has many causes, too many to list, yet the main reasons for the death of the
+bees are most likely insecticides and a certain parasite. When we were starting out we heard of a story of a hive,
+which stood near a cell phone tower. Apparently many bees seemed to lose orientation and some even died
+because of this. As there is not much scientific research on this particular reason for CCD we wanted to study its
+significance. To find out how cell phone radiation affects the bees we measure various factors and then turn on a
+cell phone near the hive for different amounts of time. The aspects we measure include noise, temperature and the
+amount of bees leaving and entering the hive via a system of light sensors we built ourselves. Furthermore we
+have an infrared camera that observes the hive and takes pictures. We do not intend to harm the bees by any
+means. One of us took part in schooling for beekeepers, so we know how to correctly take care of the bees. After
+we see what kind of results the exposure of the bees to short term cell phone radiation yield we want to do long term measurements, 
+with the cell phone automatically calling at certain times. </p>
+					
+
+					<a class="ifsvt-image" nohref="img/stats1.png" data-toggle="lightboxREMOVED" data-title="CCD Statistics">
+                        <img  src="img/stats1.png" class="img-responsive">
+                     </a>
+                    <span class="caption text-muted">CCD continues to be a problem for beekeepers, not just in the US but worldwide.</span>
+
+					</div>
+            </div>
+        </div>
+     <hr></article>
+	
+	<article id="media">
+	
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">Media Gallery</h2>
+					<br>
+			
+					
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/W1o5eimBWco?rel=0"></iframe>
+					</div>
+					
+					<span class="caption text-muted">Some summer bee activity shot in high speed. (July 2016)
+					</span>
+					<br>
+					<div class="row">
+					
+					  <div class="col-md-4 bee-media-gallery-thumbnail">
+						<a class="ifsvt-image" nohref="img/gallery/image4.jpg" data-toggle="lightboxREMOVED" data-title="Moving the Bees into their new Home" data-footer="The queen was placed inside the hive, the workers and drones follow her scent.">
+							<img src="img/gallery/image4.thumb.jpg" class="img-thumbnail">
+						</a>
+					  </div>
+					  
+					  <div class="col-md-4 bee-media-gallery-thumbnail">
+						<a class="ifsvt-image" nohref="img/gallery/image3.jpg" data-toggle="lightboxREMOVED" data-title="Checking out the Area" data-footer="Soon, workers begin to scout the area for food sources.">
+							<img src="img/gallery/image3.thumb.jpg" class="img-thumbnail">
+						</a>
+					  </div>
+					  
+					  <div class="col-md-4 bee-media-gallery-thumbnail">
+						<a class="ifsvt-image" nohref="img/gallery/image2.jpg" data-toggle="lightboxREMOVED" data-title="A Frame from our Hive" data-footer="A frame with brood and many worker bees, as seen in our weekly inspections.">
+							<img src="img/gallery/image2.thumb.jpg" class="img-thumbnail">
+						</a>
+					  </div>
+					</div>
+					
+					<div class="row">
+					
+					  <div class="col-md-4 bee-media-gallery-thumbnail">
+						<a class="ifsvt-image" nohref="img/gallery/image6.jpg" data-toggle="lightboxREMOVED" data-title="A black Cat" data-footer="After getting lucky and coincidentally spotting this cat, motion detection software was setup on the Raspberry Pi.">
+							<img src="img/gallery/image6.thumb.jpg" class="img-thumbnail">
+						</a>
+					  </div>
+					  
+					  <div class="col-md-4 bee-media-gallery-thumbnail">
+						<a class="ifsvt-image" nohref="img/gallery/image5.jpg" data-toggle="lightboxREMOVED" data-title="Light Barrier" data-footer="This is our light barrier circuit. Technically, it consists of ten parallel light barriers. It's controlled with an Arduino.">
+							<img src="img/gallery/image5.thumb.jpg" class="img-thumbnail">
+						</a>
+					  </div>
+					  
+					  <div class="col-md-4 bee-media-gallery-thumbnail">
+						<a class="ifsvt-image" nohref="img/gallery/image1.jpg" data-toggle="lightboxREMOVED" data-title="Feeding for Winter" data-footer="To enter winter as a strong hive, bees are fed in autumn. Before refilling this feeding apparatus with sugar water, the bees are removed with smoke.">
+							<img src="img/gallery/image1.thumb.jpg" class="img-thumbnail">
+						</a>
+					  </div>
+					</div>
+
+					<span class="caption text-muted">Click on the images to enlarge them.
+					</span>
+
+
+					</div>
+            </div>
+        </div>
+     <hr></article>
+	 
+	<article id="who">
+	        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">Who & Where We Are</h2>
+
+                    <p>In the Schülerforschungszentrum Nordhessen (SFN, Student Research Center of Northern Hesse) 
+						stundents, typically groups, from all over northern Hesse can work on a science project of 
+						their choice. We do the work on our own, but staff (teachers and university students) is there
+						to assist us. The four-story SFN building features a workshop, 
+						laboratories (physics, biology and chemistry), an observatory with seven telescopes, all kinds
+						of scientific equipment and more on about 650 square meters.
+						
+					<br>
+					You can find out more about the SFN on their <a href="http://sfn-kassel.de/wir-ueber-uns/for-english-visitors">website</a>.</p>
+					
+					<p>We are a group of five  students, aged between 15 and 17. Three of us have been with the SFN for
+					over 6 years. In the past we've done projects in the fields of physics, astronomy and electronics. 
+						
+					</p>
+
+					
+					<a class="ifsvt-image" nohref="img/sfn_building.jpg" data-toggle="lightboxREMOVED" data-title="The SFN Building">
+                        <img src="img/sfn_building.jpg" class="img-responsive">
+                     </a>
+					
+                    <span class="caption text-muted">The SFN building which was completed in July 2012.</span>
+
+					</div>
+            </div>
+        </div>
+	<hr></article>
+	
+	
+	<article id="hive">
+	
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">Our Beehive</h2>
+
+                    <p>In June 2016 we set up a beehive adjacent to the SFN, in cooperation with a local urban beekeeper.
+					
+					A detailled report on the installation of the hive can be found on the SFN 
+					<a href="http://sfn-kassel.de/neuigkeiten/12-clubnews/515-bienenprojekt-geht-in-versuchsphase">website</a>.</p>
+					
+					 <a class="ifsvt-image" nohref="http://sfn.afcarl.de/img/lastsnap.jpg" data-toggle="lightboxREMOVED" data-title="The Webcam's View">
+                        <img src="http://sfn.afcarl.de/img/lastsnap.jpg" class="img-responsive">
+                     </a>
+					 
+                    <span class="caption text-muted">We placed a Raspberry Pi minicomputer with a camera in front of our beehive to live stream it's entrance.
+					<!--Unfortunately, the webcam is out of order at the moment.-->
+					Currently, images are taken every minute.
+					</span>
+
+					</div>
+            </div>
+        </div>
+     <hr></article>
+	
+	
+	<article id="plan">
+	
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">How We Plan To Experiment</h2>
+
+					<br><br>
+                    
+						
+					 <a class="ifsvt-image" nohref="img/schematic.png" data-toggle="lightboxREMOVED" data-title="Schematic">
+                        <img src="img/schematic.png" class="img-responsive">
+                     </a>
+
+                    <span class="caption text-muted">This schematic depicts our hypothesis and way of testing it.
+					</span>
+
+					</div>
+            </div>
+        </div>
+     <hr></article>
+	 
+	 
+	 
+	 
+	 
+	 	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://www.youtube.com/channel/UC-xI_UssIjIsmHBEJ8cFQyw">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+							
+						<script language="JavaScript">
+
+						var username = "bienenprojekt.sf";
+
+						var hostname = "mail.com";
+
+
+						document.write("<a href='" + "mail" + "to:" + username + "n@g" + hostname + "'>");
+
+						</script>
+                            
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/bienenprojekt">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+					   <li>
+                            <a href="http://sfn-kassel.de/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-stack-1x fa-inverse" style="font-family:Arial;font-size:17px">SFN</i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+					<p class="copyright text-muted">SFN Bienenprojekt 2017 / Theme under MIT license</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+	
+
+	
+			<script type="text/javascript">
+			$( document ).ready(function() {
+				$( "#ifsvt-placeholder").html( "<div class='ifsvt-display' id='ifsvt-background'></div><img id='ifsvt-displayimg' class='ifsvt-display' src='http://i.imgur.com/KvBzfJD.png'/>" );
+			
+				$( ".ifsvt-display").toggle();
+				
+				$( ".ifsvt-image" ).click(function(e) {
+					src = e.target.src.replace('.thumb','');
+					$( "#ifsvt-displayimg").attr("src", src );
+					$( ".ifsvt-display").toggle(); // Not nesting here because that'd be slow
+	
+					$( "#ifsvt-background" ).animate({
+						opacity: 0.65
+					},500);
+					$( "#ifsvt-displayimg" ).animate({
+						opacity: 1
+					},500);
+					
+				});
+				
+				$( ".ifsvt-display" ).click(function() {
+					$( ".ifsvt-display" ).animate({
+						opacity: 0.0
+					},500, function() {
+						$( ".ifsvt-display").hide();
+					});
+					
+				});
+				
+				
+			});
+
+		
+	</script>
+		
+		<!-- Smooth anchor scroll  https://codepen.io/mattsince87/pen/exByn -->
+		<script type="text/javascript">
+	function scrollNav() {
+  $('.nav a').click(function(){  
+    //Toggle Class
+    $(".active").removeClass("active");      
+    $(this).closest('li').addClass("active");
+    var theClass = $(this).attr("class");
+    $('.'+theClass).parent('li').addClass('active');
+    //Animate
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 200);
+    return false;
+  });
+  $('.scrollTop a').scrollTop();
+}
+scrollNav();
+	
+</script>
+
+
+
+</body>
+
+</html>
