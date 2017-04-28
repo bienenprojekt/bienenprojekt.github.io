@@ -1,0 +1,17 @@
+<style>#c {
+    width: 1500px;
+    height: 600px;
+    background: url(plot.png) 0 0;
+}
+</style>
+<input type="range" id="myRange" style="width:1500px" oninput="myFunction()" value="0" min="0" max="68"><br>
+<p id="demo"></p>
+<hr>
+<div id="c">
+<script>
+function myFunction() {
+    var x = document.getElementById("myRange").value;
+    //document.getElementById("demo").innerHTML = x;
+	document.getElementById("c").style.backgroundPosition = "0px " + -x*600 +  "px";
+}
+</script>
