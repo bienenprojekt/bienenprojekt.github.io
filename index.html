@@ -486,7 +486,9 @@ with the cell phone automatically calling at certain times. </p>
 					$( ".ifsvt-display" ).animate({
 						opacity: 0.0
 					},500, function() {
-						$( ".ifsvt-display").hide();
+            $( ".ifsvt-display").hide(function() {
+              $( "#ifsvt-displayimg").attr("src", "src/blank.png");
+            });
 					});
 					
 				});
